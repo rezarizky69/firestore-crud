@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etNamaBaru"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etJurusan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Jurusan"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etJurusanBaru"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNama" />
+
+    <EditText
+        android:id="@+id/etAsal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Asal"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etAsalBaru"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etJurusan" />
+
+    <EditText
+        android:id="@+id/etNamaBaru"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama Baru"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etJurusan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etJurusanBaru"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Jurusan Baru"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etJurusan"
+        app:layout_constraintTop_toBottomOf="@+id/etNama" />
+
+    <EditText
+        android:id="@+id/etAsalBaru"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Asal Baru"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etAsal"
+        app:layout_constraintTop_toBottomOf="@+id/etJurusan" />
+
+
+    <Button
+        android:id="@+id/btnUploadData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Simpan Ke Database"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdateMahasiswa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAsal" />
+
+    <Button
+        android:id="@+id/btnRetrieveData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ambil Data"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteMahasiswa"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUploadData" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etKe">
+
+        <TextView
+            android:id="@+id/tvMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Mahasiswa"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </ScrollView>
+
+
+    <EditText
+        android:id="@+id/etDari"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Dari"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/etKe"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetrieveData" />
+
+    <EditText
+        android:id="@+id/etKe"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Ke"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etDari"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetrieveData" />
+
+    <Button
+        android:id="@+id/btnUpdateMahasiswa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Update Mahasiswa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnUploadData"
+        app:layout_constraintTop_toBottomOf="@+id/etAsal" />
+
+    <Button
+        android:id="@+id/btnDeleteMahasiswa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Hapus Mahasiswa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRetrieveData"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateMahasiswa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
